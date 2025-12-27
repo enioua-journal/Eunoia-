@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Future</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fffafc;
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .top-quote {
+      text-align: center;
+      font-style: italic;
+      margin-bottom: 30px;
+      color: #555;
+    }
+
+    .box-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      width: 200px;
+      padding: 20px;
+      border-radius: 15px;
+      cursor: pointer;
+      text-align: center;
+      font-weight: bold;
+      transition: transform 0.2s;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+    }
+
+    .vision { background: #ffe6cc; }
+    .safe   { background: #e6f0ff; }
+    .month  { background: #e6ffe6; }
+
+    section {
+      margin-top: 60px;
+      padding: 20px;
+      border-radius: 12px;
+      background: #f4f6f8;
+    }
+
+    textarea, input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      font-family: inherit;
+    }
+
+    /* SAFE WORDS IMAGE */
+    .safe-image-box {
+      margin-top: 20px;
+      height: 420px;
+      border-radius: 20px;
+      background: url("safe-words.png") center/cover no-repeat;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .safe-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(255, 255, 255, 0.55);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+
+    .safe-overlay p {
+      font-size: 1.4rem;
+      font-style: italic;
+      color: #333;
+      text-align: center;
+      max-width: 80%;
+    }
+
+    .safe-subtext {
+      color: #777;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>My Future 🌱</h1>
+  <p class="top-quote" id="futureQuote"></p>
+
+  <div class="box-container">
+    <div class="box vision" onclick="scrollToSection('vision')">❤️ VISION BOARD</div>
+    <div class="box safe" onclick="scrollToSection('safe')">💗 SAFE WORDS</div>
+    <div class="box month" onclick="scrollToSection('monthly')">📅 MONTHLY GOALS</div>
+  </div>
+
+  <section id="vision">
+    <h2>❤️ Vision Board</h2>
+    <input type="file" multiple accept="image/*">
+    <textarea placeholder="Why did you choose these images?"></textarea>
+  </section>
+
+  <section id="safe">
+    <h2>💗 Safe Words</h2>
+    <p class="safe-subtext">Read this when things feel heavy.</p>
+
+    <div class="safe-image-box">
+      <div class="safe-overlay">
+        <p id="safeMessage"></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="monthly">
+    <h2>📅 Monthly Goals</h2>
+    <input placeholder="Main goal for this month">
+    <textarea placeholder="What did I do well?"></textarea>
+    <textarea placeholder="What didn’t work and why?"></textarea>
+  </section>
+
+  <script>
+    const futureQuotes = [
+      "You don’t need to have it all figured out.",
+      "Consistency matters more than speed.",
+      "This is your journey.",
+      "Progress is quiet but powerful.",
+      "Everything you’ve done so far is enough for today. You don’t need to push or decide anything right now.",
+      "You are allowed to take breaks without guilt.",
+      "Healing and growth are not a race.",
+      "Showing up in small ways still matters."
+    ];
+
+    document.getElementById("futureQuote").innerText =
+      futureQuotes[Math.floor(Math.random() * futureQuotes.length)];
+
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    }
+
+    const safeWords = [
+      "Small progress still counts.",
+      "It’s okay to feel confused sometimes.",
+      "You are allowed to learn at your own pace.",
+      "Good things take time.",
+      "Resting is not failing.",
+      "You are doing better than you think.",
+      "You’ve survived every hard day so far — that matters.",
+      " Slow progress is still progress. Don’t underestimate it.",
+        "You are stronger than the moments that made you doubt yourself.",
+        "Even on tired days, you are moving forward.",
+        "You don’t need permission to believe in yourself.",
+        "Your effort counts, even when no one sees it.",
+        "This phase is shaping you, not breaking you.",
+        "You are capable of more than you feel right now.",
+        "It’s okay to restart — beginnings can happen more than once.",
+        "Keep going. The version of you ahead is cheering you on."
+    ];
+
+    document.getElementById("safeMessage").innerText =
+      safeWords[Math.floor(Math.random() * safeWords.length)];
+  </script>
+
+</body>
+</html>

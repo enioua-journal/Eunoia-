@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enioua – A Gentle Journal</title>
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(180deg, #fff7f5 0%, #f3f6f7 100%);
+      color: #1f2a44;
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background: #f7dfe3;
+      padding: 18px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand img {
+      width: 89px;
+      height: 66px;
+      border-radius: 50%;
+    }
+
+    .brand-name {
+      font-family: 'Dancing Script', cursive;
+      font-size: 60px;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      margin-left: 28px;
+      text-decoration: none;
+      text-decoration-line: underline;
+      font-style: "Dancing script",italic;
+      font-weight: 612;
+      color: #1f2a44;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      text-align: center;
+      padding: 90px 20px 60px;
+    }
+
+    .hero-quote {
+      font-family: 'Dancing Script', cursive;
+      font-size: 66px;
+      color: #0b2a4a;
+      margin-bottom: 50px;
+    }
+
+    /* ===== WELCOME BOX ===== */
+    .welcome-box {
+      max-width: 900px;
+      margin: 0 auto 70px;
+      background: #221047;
+      color: #ffffff;
+      padding: 45px 55px;
+      border-radius: 40px;
+      font-family: 'Dancing Script', cursive;
+      font-size: 28px;
+      line-height: 1.6;
+      box-shadow: 0 25px 60px rgba(34, 16, 71, 0.35);
+    }
+
+    /* ===== ACTION CARDS ===== */
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 40px 20px 80px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #f7dfe3;
+     
+      width: 280px;
+      padding: 35px 25px;
+      border-radius: 30px;
+      text-align: center;
+      font-family: 'Dancing Script', cursive;
+      font-size: 40px;
+      color: #1f2a44;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 35px rgba(161, 169, 254, 0.5);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .hero-quote {
+        font-size: 42px;
+      }
+
+      .welcome-box {
+        font-size: 22px;
+        padding: 30px;
+      }
+
+      .card {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="brand">
+      <img src="Identity.png" alt="Enioua Logo">
+      <div class="brand-name">Eunoia</div>
+    </div>
+
+    <nav>
+      <a href="Enioua.html">My Journal</a>
+      <a href="past.html">My Memories</a>
+      <a href="future.html">My Future</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-quote">
+      "Capture today. Reflect tomorrow."
+    </div>
+
+    <div class="welcome-box">
+      Welcome to your personal space to record daily thoughts, reflections, and memories.
+      Our journal helps you capture each day in words, track your growth,
+      and reflect on the moments that matter most.
+    </div>
+  </section>
+
+  <!-- ACTIONS -->
+  <section class="actions">
+    <div class="card" onclick="location.href='Enioua.html'">
+      Write your thoughts
+    </div>
+
+    <div class="card" onclick="location.href='past.html'">
+      Revisit your memories
+    </div>
+
+    <div class="card" onclick="location.href='future.html'">
+      Visualise your future
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="privacy-policy.html">Privacy Policy</a>
+    This is a gentle space to pause, reflect, and grow at your own pace.<br>
+    © 2025 Eunoia. All rights reserved.
+    Content, design, and concept are the intellectual property of Eunioa. 
+  </footer>
+
+</body>
+</html>

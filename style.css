@@ -1,0 +1,262 @@
+/* ===== GOOGLE FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ===== BODY BACKGROUND ===== */
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #f6f7ff, #fff1e6);
+}
+
+/* ===== HEADER ===== */
+header {
+  background: #f7dfe3;
+  padding: 22px 0;
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.logo img {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+}
+
+.logo strong {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.3rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #1f2a44;
+}
+
+/* ===== MAIN APP CONTAINER ===== */
+.app-container {
+  max-width: 900px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 30px;
+}
+
+/* ===== PROGRESS BAR ===== */
+.progress {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.step {
+  width: 30px;
+  height: 6px;
+  background: #e0e3ff;
+  border-radius: 10px;
+}
+
+.step.active {
+  background: #9aa6ff;
+}
+
+/* ===== HEADINGS ===== */
+h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+  color: #2b2b2b;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 25px;
+  font-size: 15px;
+}
+
+/* ===== FORM ===== */
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== FIELD BOX ===== */
+.field-box {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 16px;
+  margin-bottom: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.field-box::before {
+  content: "";
+  width: 40px;
+  height: 4px;
+  background: #9aa6ff;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.field-box label {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.field-box input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  background: #fff;
+}
+
+.field-box input:focus {
+  outline: none;
+  border-color: #9aa6ff;
+}
+
+/* ===== PRIMARY BUTTON ===== */
+.btn-primary {
+  margin-top: 10px;
+  text-align: center;
+  padding: 14px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ffb97f, #ff9f66);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 159, 102, 0.4);
+}
+
+/* ===== NAV BUTTONS ===== */
+.nav-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.btn-secondary {
+  flex: 1;
+  text-align: center;
+  padding: 14px;
+  border-radius: 16px;
+  background: #eef0ff;
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.btn-secondary:hover {
+  background: #e0e3ff;
+}
+
+/* ===== STICKERS ===== */
+#stickers {
+  display: flex;
+  gap: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.sticker {
+  padding: 6px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.sticker:hover {
+  background: #f1f2ff;
+}
+
+/* ===== SAFE WORDS IMAGE SECTION ===== */
+.safe-image-box {
+  width: 100%;
+  max-width: 420px;
+  height: 300px;
+  margin-top: 20px;
+  background-image: url("Love\ everything.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.safe-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.safe-overlay p {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  line-height: 1.5;
+}
+
+.safe-subtext {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ===== MOBILE OPTIMIZATION ===== */
+@media (max-width: 600px) {
+  .app-container {
+    padding: 20px 15px;
+    margin: 20px auto;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+  }
+
+  .header-inner {
+    padding: 0 20px;
+  }
+}
+
+
+
