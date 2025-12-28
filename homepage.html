@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Enioua – A Gentle Journal</title>
+  <title>Eunoia – A Gentle Journal</title>
 
   <!-- GOOGLE FONTS -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@400;500&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
@@ -38,7 +38,7 @@
 
     .brand img {
       width: 89px;
-      height: 66px;
+      height: auto;
       border-radius: 50%;
     }
 
@@ -50,14 +50,14 @@
 
     nav a {
       margin-left: 28px;
-      text-decoration: none;
-      text-decoration-line: underline;
-      font-style: "Dancing script",italic;
-      font-weight: 612;
+      text-decoration: underline;
+      font-family: 'Dancing Script', cursive;
+      font-weight: 600;
       color: #1f2a44;
+      font-size: 18px;
     }
 
-    /* ===== HERO SECTION ===== */
+    /* ===== HERO ===== */
     .hero {
       text-align: center;
       padding: 90px 20px 60px;
@@ -95,7 +95,6 @@
 
     .card {
       background: #f7dfe3;
-     
       width: 280px;
       padding: 35px 25px;
       border-radius: 30px;
@@ -120,20 +119,66 @@
       color: #666;
     }
 
-    /* ===== RESPONSIVE ===== */
+    footer a {
+      color: #666;
+      text-decoration: underline;
+    }
+
+    /* ===== RESPONSIVE (MOBILE FIXED) ===== */
     @media (max-width: 768px) {
-      .hero-quote {
+
+      header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 20px;
+        gap: 12px;
+      }
+
+      .brand {
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .brand img {
+        width: 60px;
+      }
+
+      .brand-name {
         font-size: 42px;
       }
 
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+
+      nav a {
+        margin-left: 0;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+      }
+
+      .hero {
+        padding: 60px 15px 40px;
+      }
+
+      .hero-quote {
+        font-size: 32px;
+      }
+
       .welcome-box {
-        font-size: 22px;
-        padding: 30px;
+        font-size: 20px;
+        padding: 24px;
+        border-radius: 28px;
+        margin-bottom: 50px;
       }
 
       .card {
         width: 100%;
         max-width: 320px;
+        font-size: 34px;
       }
     }
   </style>
@@ -144,7 +189,7 @@
   <!-- HEADER -->
   <header>
     <div class="brand">
-      <img src="Identity.png" alt="Enioua Logo">
+      <img src="Identity.png" alt="Eunoia Logo">
       <div class="brand-name">Eunoia</div>
     </div>
 
@@ -168,7 +213,7 @@
     </div>
   </section>
 
-  <!-- ACTIONS -->
+  <!-- ACTION CARDS -->
   <section class="actions">
     <div class="card" onclick="location.href='Enioua.html'">
       Write your thoughts
@@ -185,11 +230,12 @@
 
   <!-- FOOTER -->
   <footer>
-    <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="privacy-policy.html">Privacy Policy</a><br><br>
     This is a gentle space to pause, reflect, and grow at your own pace.<br>
-    © 2025 Eunoia. All rights reserved.
-    Content, design, and concept are the intellectual property of Eunioa. 
+    © 2025 Eunoia. All rights reserved.<br>
+    Content, design, and concept are the intellectual property of Eunoia.
   </footer>
 
 </body>
-</html>
+</html> 
+
